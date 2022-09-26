@@ -33,7 +33,7 @@ function onCountry(countries) {
     refs.countryList.innerHTML = '';
     refs.countryInfo.innerHTML = '';
     if (countries.length > 10) {
-        Notify.info('Too many matches found. Please enter a more specific name.');
+        Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
     }
 
     if (countries.length > 2 && countries.length < 10) {
@@ -54,11 +54,11 @@ function onCountry(countries) {
             </div>`
       }).join('');
       refs.countryInfo.innerHTML = markup;  
-   }
+  }
   
 }
     
 
 function onError() { 
-    Notify.failure('Oops, there is no country with that name.'); 
+    Notiflix.Notify.failure('Oops, there is no country with that name.'); 
 }
